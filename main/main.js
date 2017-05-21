@@ -7,58 +7,46 @@ module.exports = function main() {
 };
 
 class Sequence {
-    var min
-    var max
-    var num=0
-    var sum=0
-    var nums
+
   constructor(input) {
     // Write your code here
-      this.nums =input.split(",")
-     
-      var first = nums[0].split("")
-      this.min=parseInt(first[1])
-      var end =nums.length
-      var last = nums[end-1].split("")
-      this.max =parseInt(last[0])
-      sum=min+max
+    this.array =input
       
       }
 
   minimum() {
     // Write your code here
-      for(var i=1;i<nums.length-1;i++){
-      if(min>nums[i]){
-      min=nums[i]
+      var min=this.array[0]
+      for(var i=1;i<this.array.length;i++){      
+      if(min>this.array[i]){
+      min=this.array[i]
       }          
       }
-      if(min>max){
-      min=max
-      }
+ 
       return min
   }
   maximal(){
-    for(var i=1;i<nums.length-1;i++){
-      if(max<nums[i]){
-        max=nums[i]
-        }          
-    }
-      if(max<min){
-      max=min
+    var max=this.array[0]
+      for(var i=1;i<this.array.length;i++){      
+      if(max<this.array[i]){
+      max=this.array[i]
+      }          
       }
+ 
       return max
       
   }
 
   number(){
-      return (nums.length+2)
+      return (this.array.length)
   }
   
   avg(){
-      for(var i =1;i<sums.length-1;i++){
-        sum+=nums[i]
+      var sum=0
+      for(var i =0;i<this.array.length;i++){
+        sum+=this.array[i]
       }
-      return sum/(nums.length+2)
+      return sum/(this.array.length)
   }
   // Write your code here
 }

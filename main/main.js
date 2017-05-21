@@ -46,7 +46,7 @@ class Sequence {
       for(var i =0;i<this.array.length;i++){
         sum+=this.array[i]
       }
-      return sum/(this.array.length)
+      return (sum/(this.array.length)).toFixed(2)
   }
   // Write your code here
 }
